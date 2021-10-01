@@ -1,9 +1,9 @@
-# The VSP-DB is a server designed for storing Videos & Playlists
+# Sample server for Video & Playlist APIs
 
 Use "create-react-app" on the command line to install this app.
-npx create-react-app my-app
-cd my-app
-npm start
+* npx create-react-app my-app
+* cd my-app
+* npm start
 
 ## USER
 This model and controller was developed to route to the following endpoints:

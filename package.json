@@ -1,5 +1,5 @@
 {
-  "name": "db-vsp",
+  "name": "my-db-vsp",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slholton/db-vsp.git"
+    "url": "git+https://github.com/slholton/my-vsp-app.git"
   },
   "keywords": [],
   "author": "Shavonne L Holton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/slholton/db-vsp/issues"
+    "url": "https://github.com/slholton/my-vsp-app/issues"
   },
-  "homepage": "https://github.com/slholton/db-vsp#readme",
+  "homepage": "https://github.com/slholton/my-vsp-app#readme",
   "dependencies": {
     "@types/cors": "^2.8.12",
     "bcryptjs": "^2.4.3",

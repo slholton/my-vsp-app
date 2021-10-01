@@ -1,7 +1,6 @@
 require('dotenv').config()
 const Express = require("express")
 const app = Express()
-const port = 3000
 
 app.use(require('./middleware/headers'));
 
@@ -24,7 +23,7 @@ app.use(require('./middleware/headers'));
         const playlist = require('./controllers/Playlist')
         app.use("/playlists", playlist)
 
-        app.listen(port, () => {
-            console.log(`App is listening on http://localhost:${port}`)
+        app.listen(process.env.PORT, () => {
+            console.log(`App is listening on ${process.env.PORT}`)
         })
     })()

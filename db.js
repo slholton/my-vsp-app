@@ -1,26 +1,28 @@
 const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
-        dialect: 'postgres',
-        protocol: 'postgres',
-        ssl: process.env.DB_ENABLE_SSL,
-        dialectOptions: { 
-            ssl: process.env.DB_ENABLE_SSL && {
-                require: true,
-            }
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
         }
-    })
 
-async function syncDb(sequelize, options){
+    }
+}
+)
+
+async function syncDb(sequelize, options) {
     const { force, alter } = options
     try {
         if (force)
-            await sequelize.sync({force: true})
+            await sequelize.sync({ force: true })
         else if (alter)
-            await sequelize.sync({alter: true})
+            await sequelize.sync({ alter: true })
         else
             await sequelize.sync()
-    } catch (err){
+    } catch (err) {
         console.log(err)
     }
 }

@@ -5,15 +5,10 @@ const app = Express()
 app.use(require('./middleware/headers'));
 
 const cors = require('cors');
-// app.use(require('./middleware/headers'));
 app.use(cors());
 
     ; (async () => {
         app.use(Express.json())
-
-        // const cors = require('cors');
-        // // app.use(require('./middleware/headers'));
-        // app.use(cors());
 
         // CRUD for User
         const auth = require('./controllers/Auth')

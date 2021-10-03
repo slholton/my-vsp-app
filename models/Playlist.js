@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Playlist = sequelize.define("Playlist", {
         publishDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false
         },
         title: {
